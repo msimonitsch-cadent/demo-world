@@ -1,0 +1,103 @@
+.resize-container {
+  padding: 20px;
+  font-family: system-ui, sans-serif;
+}
+
+.demo {
+  margin: 40px 0;
+}
+
+.demo h2 {
+  margin-bottom: 16px;
+}
+
+/* Column Resize */
+.column-container {
+  display: flex;
+  /* height: 200px; */
+  /* border: 1px solid #ccc; */
+  /* position: relative; */
+  width: 600px;
+  overflow: hidden;
+}
+
+.left-pane {
+  background-color: #e3f2fd;
+  padding: 16px;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  min-width: 10%;
+  max-width: 90%;
+}
+
+.right-pane {
+  background-color: #f3e5f5;
+  padding: 16px;
+  flex: 1;
+  height: 100%;
+  box-sizing: border-box;
+  min-width: 10%;
+  max-width: 90%;
+}
+
+/* Custom handle styles */
+.column-handle {
+  cursor: col-resize !important;
+}
+
+.column-handle:hover {
+  background-color: #333 !important;
+}
+
+/* Row Resize */
+.row-container {
+  width: 400px;
+  height: 300px;
+  border: 1px solid #ccc;
+  position: relative;
+  overflow: hidden;
+}
+
+.top-pane {
+  background-color: #e8f5e8;
+  padding: 16px;
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.bottom-pane {
+  background-color: #fff3e0;
+  padding: 16px;
+  box-sizing: border-box;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+/* Custom row handle styles */
+.row-handle {
+  cursor: row-resize !important;
+}
+
+.row-handle:hover {
+  background-color: #333 !important;
+}
+
+/* re-resizable overrides */
+.resize-container .react-resizable-handle {
+  z-index: 10;
+}
+
+.resize-container .react-resizable-handle-right {
+  cursor: col-resize;
+}
+
+.resize-container .react-resizable-handle-bottom {
+  cursor: row-resize;
+}
