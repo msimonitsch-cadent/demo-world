@@ -29,6 +29,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  overflow: auto;
 }
 
 .left-panel h3 {
@@ -53,6 +54,7 @@
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  overflow: auto;
 }
 
 .right-panel h3 {

@@ -9,7 +9,7 @@ function ReactResizablePanels() {
 
       <div className="panels-wrapper">
         <PanelGroup autoSaveId="simple-example" direction="horizontal">
-          <Panel defaultSize={50}>
+          <Panel defaultSize={50} minSize={10} maxSize={90}>
             <div className="left-panel">
               <h3>Left Panel</h3>
               <p>This is the left panel with a blue background.</p>
@@ -17,7 +17,7 @@ function ReactResizablePanels() {
             </div>
           </Panel>
           <PanelResizeHandle />
-          <Panel>
+          <Panel minSize={10} maxSize={90}>
             <div className="right-panel">
               <h3>Right Panel</h3>
               <p>This is the right panel with a green background.</p>
